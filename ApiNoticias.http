@@ -1,0 +1,86 @@
+@ApiNoticias_HostAddress = http://localhost:5000
+
+### Listar todos os autores
+GET {{ApiNoticias_HostAddress}}/api/autor
+Accept: application/json
+
+###
+
+### Buscar autor por ID
+GET {{ApiNoticias_HostAddress}}/api/autor/byid/1
+Accept: application/json
+
+###
+
+### Adicionar novo autor
+POST {{ApiNoticias_HostAddress}}/api/autor
+Content-Type: application/json
+
+{
+  "nome": "Carlos Oliveira",
+  "email": "carlos.oliveira@email.com"
+}
+
+###
+
+### Alterar autor
+PUT {{ApiNoticias_HostAddress}}/api/autor/1
+Content-Type: application/json
+
+{
+  "nome": "João Silva Atualizado",
+  "email": "joao.silva.novo@email.com"
+}
+
+###
+
+### Excluir autor
+DELETE {{ApiNoticias_HostAddress}}/api/autor/1
+
+###
+
+### Listar todas as notícias
+GET {{ApiNoticias_HostAddress}}/api/noticia
+Accept: application/json
+
+###
+
+### Buscar notícia por ID
+GET {{ApiNoticias_HostAddress}}/api/noticia/byid/1
+Accept: application/json
+
+###
+
+### Buscar notícias por autor
+GET {{ApiNoticias_HostAddress}}/api/noticia/byautor/1
+Accept: application/json
+
+###
+
+### Adicionar nova notícia
+POST {{ApiNoticias_HostAddress}}/api/noticia
+Content-Type: application/json
+
+{
+  "titulo": "Nova Notícia de Teste",
+  "texto": "Este é o conteúdo da nova notícia de teste.",
+  "autorId": 1
+}
+
+###
+
+### Alterar notícia
+PUT {{ApiNoticias_HostAddress}}/api/noticia/1
+Content-Type: application/json
+
+{
+  "titulo": "Notícia Atualizada",
+  "texto": "Este é o conteúdo atualizado da notícia.",
+  "autorId": 2
+}
+
+###
+
+### Excluir notícia
+DELETE {{ApiNoticias_HostAddress}}/api/noticia/1
+
